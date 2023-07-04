@@ -62,7 +62,7 @@ print("Greatest Increase in Profits: ",max_profit_id,"($",max_profit,")")
 #greatest decrease in profits (date and amount) over the entire period.
 print("Greatest Decrease in Profits: ",max_loss_id,"($",max_loss,")")
 
-output_path=os.path.join('Resources','budget_data_stats.csv')
+output_path=os.path.join('Analysis','Analysis.txt')
 with open (output_path,'w') as csvfile:
         csvwriter=csv.writer(csvfile, delimiter=',')
         csvwriter.writerow(['Total Months', column_count])
