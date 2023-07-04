@@ -1,1 +1,4 @@
-
+Pulled libraries os and csv.
+Read the csv into Python and added up the total profit over time, counted how many months of data there were, calculated the change between each months' profit and found the highest loss between two months and highest profit between two months.
+Write the total profit, number of months, average change from month to month of profit, greatest increase in profits and greatest decrease in profits in a month into a csv file.
+Printed the total profit, number of months, average change from month to month of profit, greatest increase and decrease in profits to the terminal.
