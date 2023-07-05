@@ -86,9 +86,11 @@ output_path=os.path.join('Analysis','Analysis.txt')
 
 #Keeping the file open, write the data into the txt file.
 with open (output_path,'w') as txtfile:
-        txtwriter=txt.writer(txtfile, delimiter=': ')
-        txtwriter.writerow(['Total Months', column_count])
-        txtwriter.writerow(['Total', total_net])
-        txtwriter.writerow(['Average Change',average_change])
-        txtwriter.writerow(['Greatest Increase in Profits',max_profit_id,max_profit])
-        txtwriter.writerow(['Greatest Decrease in Profits',max_loss_id,max_loss])
+        txtwriter=txt.writer(txtfile, delimiter=' ')
+        txtwriter.writerow(['Financial Analysis])
+        txtwriter.writerow([----------------------------'])
+        txtwrite.writerow(['Total Months: ', column_count])
+        txtwriter.writerow(['Total: ', total_net])
+        txtwriter.writerow(['Average Change: ',average_change])
+        txtwriter.writerow(['Greatest Increase in Profits: ',max_profit_id,max_profit])
+        txtwriter.writerow(['Greatest Decrease in Profits: ',max_loss_id,max_loss])
