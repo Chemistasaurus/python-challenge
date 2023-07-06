@@ -1,1 +1,5 @@
-
+Read the csv file into python.
+Created a list of candidates, a total count of the number of votes counted, and a count of votes that each candidate received.
+Calculated the percentage of votes that each candidate received.
+Found the winner of the election based on the highest number of votes.
+Output the election results to a txt file including: The total number of votes, the name of each of the candidates, the percent votes they each received, and the total number of votes they each received.
