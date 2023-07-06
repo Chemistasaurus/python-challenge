@@ -69,16 +69,44 @@ elif winner==third_candidate_votes:
       print("Winner: ",candidate_list[2])
       election_winner=candidate_list[2]
 
-#Write the election information to the analysis.txt file.
+#Set the output path for the new file.
+output_path=os.path.join('Analysis','Analysis_pypoll.txt')
+
+#Write the election information to the analysis_pypoll.txt file.
 with open (output_path,'w') as txtfile:
-        txtfile.write(txtfile)
-        txtfile.write(['Election Results'])\n
-        txtfile.write(['----------------------------'])\n
-        txtfile.write(['Total Votes: ', total_votes])\n
-        txtfile.write(['----------------------------'])\n
-        txtfile.write([candidate_list[0],': ',percent_first,'% (',first_candidate_votes,')'])\n
-        txtfile.write([candidate_list[1],': ',percent_second,'% (',second_candidate_votes,')'])\n
-        txtfile.write([candidate_list[2],': ',percent_third,'% (',third_candidate_votes,')'])\n
-        txtfile.write(['----------------------------'])\n
-        txtfile.write(["Winner: ",election_winner])\n
-        txtfile.write(['----------------------------'])\n
+        txtfile.write('Election Results')
+        txtfile.write('\n')
+        txtfile.write('----------------------------')
+        txtfile.write('\n')
+        txtfile.write('Total Votes: ')
+        txtfile.write(str(total_votes))
+        txtfile.write('\n')
+        txtfile.write('----------------------------')
+        txtfile.write('\n')
+        txtfile.write(candidate_list[0])
+        txtfile.write(': ')
+        txtfile.write(str(percent_first))
+        txtfile.write('% (')
+        txtfile.write(str(first_candidate_votes))
+        txtfile.write(')')
+        txtfile.write('\n')
+        txtfile.write(candidate_list[1])
+        txtfile.write(': ')
+        txtfile.write(str(percent_second))
+        txtfile.write('% (')
+        txtfile.write(str(second_candidate_votes))
+        txtfile.write(')')
+        txtfile.write('\n')
+        txtfile.write(candidate_list[2])
+        txtfile.write(': ')
+        txtfile.write(str(percent_third))
+        txtfile.write('% (')
+        txtfile.write(str(third_candidate_votes))
+        txtfile.write(')')
+        txtfile.write('\n')
+        txtfile.write('----------------------------')
+        txtfile.write('\n')
+        txtfile.write("Winner: ")
+        txtfile.write(election_winner)
+        txtfile.write('\n')
+        txtfile.write('----------------------------')
