@@ -86,10 +86,25 @@ output_path=os.path.join('Analysis','Analysis.txt')
 
 #Keeping the file open, write the data into the txt file.
 with open (output_path,'w') as txtfile:
-        txtfile.write(['Financial Analysis]) \n
-        txtfile.write([----------------------------']) \n
-        txtfile.write(['Total Months: ', column_count]) \n
-        txtfile.write(['Total: ', total_net]) \n
-        txtfile.write(['Average Change: ',average_change]) \n
-        txtfile.write(['Greatest Increase in Profits: ',max_profit_id,max_profit])\n
-        txtfile.write(['Greatest Decrease in Profits: ',max_loss_id,max_loss])\n
+        txtfile.write('Financial Analysis') 
+        txtfile.write('\n')
+        txtfile.write('----------------------------')
+        txtfile.write('\n')
+        txtfile.write('Total Months: ')
+        txtfile.write(str(column_count))
+        txtfile.write('\n')
+        txtfile.write('Total: ')
+        txtfile.write(str(total_net))
+        txtfile.write('\n')
+        txtfile.write('Average Change: ')
+        txtfile.write(str(average_change))
+        txtfile.write('\n')
+        txtfile.write('Greatest Increase in Profits: ')
+        txtfile.write(str(max_profit_id))
+        txtfile.write(' ')
+        txtfile.write(str(max_profit))
+        txtfile.write('\n')
+        txtfile.write('Greatest Decrease in Profits: ')
+        txtfile.write(str(max_loss_id))
+        txtfile.write(' ')
+        txtfile.write(str(max_loss))
