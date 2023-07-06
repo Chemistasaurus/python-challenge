@@ -38,30 +38,27 @@ with open(csvpath)as csvfile:
 
 #Count how many candidates are in the candidate list.
 print(len(candidate_list))
-candidate_votes={candidate_list[0]:first_candidate_votes,candidate_list[1]:second_candidate_votes,candidate_list[2]:third_candidate_votes}
 
-
+#Define the percent function.
 def percent(number):
      return (number/total_votes)*100
 
+#Set values for percent variables and have it round to three decimal places.
 percent_first=round(percent(first_candidate_votes),3)
 percent_second=round(percent(second_candidate_votes),3)
 percent_third=round(percent(third_candidate_votes),3)
 
-print('Election Results'
-      )
-print("Total Votes: ",total_votes
-      )
-
+#Print the election information in the terminal.
+print('Election Results')
+print("Total Votes: ",total_votes)
 print(candidate_list[0],': ',percent_first,"%","(",first_candidate_votes,")")
-print(
-     candidate_list[1],': ',percent_second,"%","(",second_candidate_votes,")")
-print(
-     candidate_list[2],': ',percent_third,"%","(",third_candidate_votes,")"
-     )
+print(candidate_list[1],': ',percent_second,"%","(",second_candidate_votes,")")
+print(candidate_list[2],': ',percent_third,"%","(",third_candidate_votes,")")
 
+#Set a variable to store the highest votes a candidate got.
 winner=max(first_candidate_votes,second_candidate_votes,third_candidate_votes)
 
+#Print the name of the winner to the terminal and store the name of the candidate in the variable election_winner.
 if winner==first_candidate_votes:
       print("Winner: ",candidate_list[0])
       election_winner=candidate_list[0]
@@ -72,7 +69,7 @@ elif winner==third_candidate_votes:
       print("Winner: ",candidate_list[2])
       election_winner=candidate_list[2]
 
-
+#Write the election information to the analysis.txt file.
 with open (output_path,'w') as txtfile:
         txtfile.write(txtfile)
         txtfile.write(['Election Results'])\n
